@@ -1,4 +1,4 @@
-# Лабораторная работа №8: Работа с базой данных MySQL через PHP и Docker
+# Лабораторная работа №9: CI/CD для PHP-приложения с использованием GitHub Actions и Docker
 
 ## 👩‍💻 Автор
 ФИО: Баграмов Владимир Андреевич  
@@ -8,12 +8,11 @@
 
 ## 📌 Описание задания
 Научиться:
-устанавливать и использовать PHPUnit
-писать unit-тесты для классов
-использовать mock-объекты
-тестировать HTTP-запросы через Guzzle
-работать с переменными окружения (.env)
-изолировать тестовую среду
+настраивать CI/CD pipeline
+использовать GitHub Actions
+запускать Docker-контейнеры в CI
+автоматически запускать тесты PHPUnit
+выявлять ошибки через CI
 
 
 ---
@@ -23,13 +22,15 @@
 1. Клонировать репозиторий:
    ```bash
    git clone <ссылка на репозиторий>
-   cd WEB-Lab8
+   cd WEB-Lab9
 Запустить контейнеры:
 ```bash
 docker-compose up -d --build
 ```
 
 📂 Содержимое проекта
+
+```screenshots``` - скриншоты выполнения тестов
 
 ```docker-compose.yml``` — описание сервиса Nginx и PHP-FPM
 
@@ -38,8 +39,6 @@ docker-compose up -d --build
 ```www/tests/ExampleTest.php``` - PHP-файл с тестом для проверки phpunit
 
 ```www/tests/HttpMockTest.php``` - PHP-файл с тестом для проверки GuzzleHttp c Mock
-
-```www/tests/HttpTest.php``` - PHP-файл с тестом для проверки GuzzleHttp
 
 ```www/tests/PatientTest.php``` - PHP-файл с тестом для проверки класса Patient
 
